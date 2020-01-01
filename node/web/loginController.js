@@ -40,6 +40,7 @@ function get_wx_access_token(request, response) {
                             // 第四步：根据获取的用户信息进行对应操作
                             var userinfo = JSON.parse(body);
                             console.log(userinfo)
+                            oneRes.header("Content-Type", "text/html; charset=utf-8");
                             oneRes.writeHead(200);
                             oneRes.write(JSON.stringify(userinfo));
                             oneRes.end()
